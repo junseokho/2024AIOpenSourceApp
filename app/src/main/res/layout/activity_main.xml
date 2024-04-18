@@ -1,164 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent" >
 
-    <TableLayout
-        android:id="@+id/tableLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
 
-        <TableRow>
-            <EditText
-                android:id="@+id/Edit1"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:hint="숫자1 입력" />
-        </TableRow>
-        <TableRow>
-            <EditText
-                android:id="@+id/Edit2"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:hint="숫자2 입력" />
-        </TableRow>
-    </TableLayout>
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
 
-    <GridLayout
-        android:id="@+id/gridLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:columnCount="5"
-        android:rowCount="2"
-        app:layout_constraintTop_toBottomOf="@id/tableLayout"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
-
-
-        <Button
-            android:id="@+id/BtnNum0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0" />
-        <Button
-            android:id="@+id/BtnNum1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1" />
-        <Button
-            android:id="@+id/BtnNum2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2" />
-        <Button
-            android:id="@+id/BtnNum3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="3" />
-        <Button
-            android:id="@+id/BtnNum4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="4" />
-        <Button
-            android:id="@+id/BtnNum5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="5" />
-        <Button
-            android:id="@+id/BtnNum6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="6" />
-        <Button
-            android:id="@+id/BtnNum7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="7" />
-        <Button
-            android:id="@+id/BtnNum8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="8" />
-        <Button
-            android:id="@+id/BtnNum9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="9" />
-    </GridLayout>
-
-    <TableLayout
-        android:id="@+id/tableLayout2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/gridLayout"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
-
-
-        <TableRow>
-            <Button
-                android:id="@+id/BtnAdd"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_margin="5dp"
-                android:text="더하기" />
-        </TableRow>
-        <TableRow>
-            <Button
-                android:id="@+id/BtnSub"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_margin="5dp"
-                android:text="빼기" />
-        </TableRow>
-        <TableRow>
-            <Button
-                android:id="@+id/BtnMul"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_margin="5dp"
-                android:text="곱하기" />
-        </TableRow>
-        <TableRow>
-            <Button
-                android:id="@+id/BtnDiv"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_margin="5dp"
-                android:text="나누기" />
-        </TableRow>
-
-        <TableRow>
-            <TextView
-                android:id="@+id/TextResult"
+            <ImageView
+                android:id="@+id/Dog"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="계산 결과 : "
-                android:textColor="#FF0000"
-                android:textSize="20sp" />
-        </TableRow>
+                android:layout_gravity="center"
+                android:src="@drawable/dog" />
 
-    </TableLayout>
+            <ImageView
+                android:id="@+id/Cat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/cat" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="259dp"
-        android:layout_height="70dp"
-        android:text="2022041081 홍준석"
-        tools:layout_editor_absoluteX="59dp"
-        tools:layout_editor_absoluteY="550dp" />
+            <ImageView
+                android:id="@+id/Rabbit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/rabbit" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:id="@+id/Horse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/horse" />
+        </FrameLayout>
 
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F0F000" >
+        </TabWidget>
+    </LinearLayout>
 
+</TabHost>
